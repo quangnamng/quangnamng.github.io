@@ -42,7 +42,7 @@ social:
     # Uncomment below to add more social links
     - https://www.linkedin.com/in/nguyen-quang-nam
 
-google_site_verification: # fill in to your verification string
+google_site_verification: googlea57af1b150f7f6a1.html # fill in to your verification string
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
@@ -71,7 +71,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: figs/avatar_nam.jpg
+avatar: figs/avatar.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
