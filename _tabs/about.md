@@ -1,32 +1,19 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 ![img-description](/figs/avatar.jpg){: w="500"}
 
-My name is **Nguyen Quang Nam**. I was born and raised in Hanoi, Vietnam.
+My name is **NGUYEN Quang Nam**. I was born and raised in Hanoi, Vietnam.
 
 In 2021, I obtained my **Bachelor of Engineering** at **National University of Singapore (NUS)** 
-with double major in *Mechanical Engineering* and *Physics*, and achieved Highest Distinction with Honours.
+with double major in Mechanical Engineering and Physics, and achieved Highest Distinction with Honours.
 
 Currently, I am a Research Assistant at **Nanyang Technological University (NTU Singapore)** 
 under [Control Robotics Intelligence (CRI) Group](https://personal.ntu.edu.sg/cuong/). 
 My research is in **Robotics**, more specifically Motion Planning and Control. 
+If you have the same interest, please take a look at [Research](https://quangnamng.github.io/research/).
 
-
-## Publications
-2023:
-* **Q.-N. Nguyen**, N. Adrian, and Q.-C. Pham, 
-"[Task-Space Clustering for Mobile Manipulator Task 
-Sequencing](https://doi.org/10.1109/ICRA48891.2023.10161293)," 
-in 2023 International Conference on Robotics and Automation (**ICRA**). 
-([Preprint](https://arxiv.org/abs/2305.17345) | [Video](https://youtu.be/Vopupf81hYo))
-
-In Review:
-* **Q.-N. Nguyen** and Q.-C. Pham, 
-"[Planning Optimal Trajectories for Mobile Manipulators under End-effector 
-Trajectory Continuity Constraint](https://arxiv.org/abs/2309.12251)," 
-submitted for ICRA 2024. 
-([Preprint](https://arxiv.org/abs/2309.12251) | [Video](https://youtu.be/yyBv3xGClnk))
+I am always delighted to connect and have a chat via [LinkedIn](https://www.linkedin.com/in/nguyen-quang-nam/).
