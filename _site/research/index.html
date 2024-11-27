@@ -36,21 +36,21 @@
 
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.2" />
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Research" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="My research interest is Robotics. My recent research is on Task and Motion Planning for Mobile Manipulators." />
-<meta property="og:description" content="My research interest is Robotics. My recent research is on Task and Motion Planning for Mobile Manipulators." />
+<meta name="description" content="Current Research I currently research in Robotics as a PhD student in the Machines in Motion Laboratory at New York University (NYU)." />
+<meta property="og:description" content="Current Research I currently research in Robotics as a PhD student in the Machines in Motion Laboratory at New York University (NYU)." />
 <link rel="canonical" href="http://localhost:4000/research/" />
 <meta property="og:url" content="http://localhost:4000/research/" />
 <meta property="og:site_name" content="Quang Nam Nguyen" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-10-30T11:21:51+08:00" />
+<meta property="article:published_time" content="2024-11-28T06:26:48+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Research" />
 <meta name="google-site-verification" content="googlea57af1b150f7f6a1.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-30T11:21:51+08:00","datePublished":"2023-10-30T11:21:51+08:00","description":"My research interest is Robotics. My recent research is on Task and Motion Planning for Mobile Manipulators.","headline":"Research","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/"},"url":"http://localhost:4000/research/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-28T06:26:48+08:00","datePublished":"2024-11-28T06:26:48+08:00","description":"Current Research I currently research in Robotics as a PhD student in the Machines in Motion Laboratory at New York University (NYU).","headline":"Research","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/"},"url":"http://localhost:4000/research/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -591,6 +591,41 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
 
   
   
@@ -606,60 +641,85 @@
 
 
 <!-- return -->
-<p>My research interest is <strong>Robotics</strong>. 
-My recent research is on Task and Motion Planning for Mobile Manipulators.</p>
+<h2 id="current-research"><span class="me-2">Current Research</span><a href="#current-research" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>I currently research in <strong>Robotics</strong> as a PhD student in the 
+<a href="https://www.machinesinmotion.org/">Machines in Motion Laboratory</a> 
+at <strong>New York University (NYU)</strong>.</p>
 
-<h2 id="mobile-manipulator-task-sequencing"><span class="me-2">Mobile Manipulator Task Sequencing</span><a href="#mobile-manipulator-task-sequencing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<ul>
-  <li>Applications: tasks involving multiple targets distributed in a larger workspace</li>
-  <li>Problem: find the minimum number of base poses and the optimal sequence to visit all targets</li>
-  <li>Solution: two-step approach:
-    <ol>
-      <li>Task-space clustering: based on kinematic reachability analysis, cluster the task space into a minimum set 
-of target clusters such that there exists a reachable base pose for each cluster to reach all inside targets.</li>
-      <li>Task sequencing: compute the shortest base sequence, shortest target sequence, then shortest manipulator 
-joint sequence to visit all targets.</li>
-    </ol>
-  </li>
-  <li>Paper: <a href="https://doi.org/10.1109/ICRA48891.2023.10161293">Task-Space Clustering for Mobile Manipulator Task Sequencing</a> 
-(presented at ICRA 2023)</li>
-  <li>Video: <a href="https://youtu.be/Vopupf81hYo">youtu.be/Vopupf81hYo</a></li>
-</ul>
+<p>My current interest is optimal control and reinforcement learning 
+for exoskeletons and manipulators. 
+More details will be added in the future.</p>
 
-<h2 id="mobile-manipulator-constrained-optimal-trajectory-planning"><span class="me-2">Mobile Manipulator Constrained Optimal Trajectory Planning</span><a href="#mobile-manipulator-constrained-optimal-trajectory-planning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="past-research"><span class="me-2">Past Research</span><a href="#past-research" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Below are some of my past research on optimal task and motion planning for mobile manipulators 
+in the <a href="https://personal.ntu.edu.sg/cuong/">Control Robotics Intelligence (CRI) Group</a> 
+at <strong>Nanyang Technological University (NTU Singapore)</strong> from 2021-2024.</p>
+
+<h3 id="1-mobile-manipulator-trajectory-optimization-under-end-effector-trajectory-continuity-constraint"><span class="me-2">1. Mobile Manipulator Trajectory Optimization under End-effector Trajectory Continuity Constraint</span><a href="#1-mobile-manipulator-trajectory-optimization-under-end-effector-trajectory-continuity-constraint" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ul>
-  <li>Applications: tasks requiring the end-effector to follow a continuous trajectory (time-parametrized path), 
-such as Mobile 3D Printing which is being developed at <a href="https://www.ntu.edu.sg/sc3dp">Singapore Centre for 3D Printing (SC3DP)</a></li>
-  <li>Problem: constrained optimal trajectory planning for the mobile base</li>
+  <li>Applications: tasks requiring the end-effector to traverse a continuous 
+(time-parametrized) trajectory, e.g. Mobile 3D Concrete Printing (developed at 
+<a href="https://www.ntu.edu.sg/sc3dp">Singapore Centre for 3D Printing</a>)</li>
+  <li>Problem: find optimal base trajectory under constraints
+\(\begin{aligned}
+&amp;\mathbf{x}^{opt}(s) = \arg\min_{\mathbf{x}(s)} J[\mathbf{x}(s)]\\
+\text{s.t.}\quad
+&amp;\mathbf{x}(s) \in \mathcal{X}_a, \quad 
+\dot{\mathbf{x}}(s) \in \mathcal{V}_a \quad
+\forall s \in [0,1]
+\end{aligned}\)</li>
+  <li>Cost: weighted squared velocity (which encouraging stable motion)</li>
+  <li>Constraints: end-effector trajectory continuity constraint, arm’s joint limits, 
+base’s velocity limits and collision avoidance</li>
   <li>Solution:
     <ol>
-      <li>Based on the required trajectory and constraints, define an admissible base configuration spacetime.</li>
-      <li>Numerically compute the optimal trajectory inside the admissible base configuration spacetime.</li>
+      <li>Based on the required end-effector’s trajectory and other constraints, 
+find the admissible configuration spacetime for the mobile base.</li>
+      <li>Dynamic Programming to compute the optimal base trajectory.</li>
+      <li>Inverse Kinematics to find the joint trajectory of the arm.</li>
     </ol>
   </li>
-  <li>Paper: <a href="https://arxiv.org/abs/2309.12251">Planning Optimal Trajectories for Mobile Manipulators under End-effector Trajectory Continuity 
-Constraint</a> (submitted for ICRA 2024)</li>
-  <li>Video: <a href="https://youtu.be/yyBv3xGClnk">youtu.be/yyBv3xGClnk</a></li>
+  <li>Paper: <em>Planning Optimal Trajectories for Mobile Manipulators under End-effector 
+Trajectory Continuity Constraint</em> (ICRA 2024) 
+(<a href="https://doi.org/10.1109/ICRA57147.2024.10611630">PDF</a> | <a href="https://youtu.be/yyBv3xGClnk">Video</a>)</li>
+</ul>
+
+<h3 id="2-mobile-manipulator-task-sequencing"><span class="me-2">2. Mobile Manipulator Task Sequencing</span><a href="#2-mobile-manipulator-task-sequencing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ul>
+  <li>Applications: tasks involving multiple targets distributed in a large workspace 
+beyond the reachability of the robotic arm, e.g. drilling in a shopfloor (inspired by 
+<a href="https://robohub.org/tag/airbus-shopfloor-challenge/">Airbus Shopfloor Challenge</a>)</li>
+  <li>Problem: find minimum number of base poses and shortest motion sequence to visit all targets</li>
+  <li>Solution: two-step approach
+    <ol>
+      <li>Task-space clustering: based on kinematic reachability analysis,
+cluster the task space into a minimum set of target clusters such that 
+there exists a reachable base pose for each cluster to reach all inside targets.</li>
+      <li>Task sequencing: compute the shortest base sequence, shortest target sequence, 
+then shortest manipulator joint trajectory to visit all targets.</li>
+    </ol>
+  </li>
+  <li>Paper: <em>Task-Space Clustering for Mobile Manipulator Task Sequencing</em> (ICRA 2023) 
+(<a href="https://doi.org/10.1109/ICRA48891.2023.10161293">PDF</a> | <a href="https://youtu.be/Vopupf81hYo">Video</a>)</li>
 </ul>
 
 <h2 id="publications"><span class="me-2">Publications</span><a href="#publications" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>Full list: <a href="https://scholar.google.com/citations?user=6V-YHEkAAAAJ&amp;hl=en&amp;inst=8669986779262753491&amp;authuser=3">Google Scholar</a></p>
+<p>Full list: <a href="https://scholar.google.com/citations?user=6V-YHEkAAAAJ&amp;hl=en">Google Scholar</a></p>
+
+<p>2024:</p>
+<ul>
+  <li><strong>Q.-N. Nguyen</strong> and Q.-C. Pham, 
+<em>“Planning Optimal Trajectories for Mobile Manipulators under End-effector Trajectory 
+Continuity Constraint,”</em> International Conference on Robotics and Automation (<strong>ICRA 2024</strong>). 
+(<a href="https://doi.org/10.1109/ICRA57147.2024.10611630">PDF</a> | <a href="https://youtu.be/yyBv3xGClnk">Video</a>)</li>
+</ul>
 
 <p>2023:</p>
 <ul>
   <li><strong>Q.-N. Nguyen</strong>, N. Adrian, and Q.-C. Pham, 
-“<a href="https://doi.org/10.1109/ICRA48891.2023.10161293">Task-Space Clustering for Mobile Manipulator Task Sequencing</a>,” 
-in 2023 International Conference on Robotics and Automation (<strong>ICRA</strong>). 
-(<a href="https://arxiv.org/abs/2305.17345">Preprint</a> | <a href="https://youtu.be/Vopupf81hYo">Video</a>)</li>
-</ul>
-
-<p>Under Review:</p>
-<ul>
-  <li><strong>Q.-N. Nguyen</strong> and Q.-C. Pham, 
-“<a href="https://arxiv.org/abs/2309.12251">Planning Optimal Trajectories for Mobile Manipulators under End-effector Trajectory Continuity 
-Constraint</a>,” 
-submitted for ICRA 2024. 
-(<a href="https://arxiv.org/abs/2309.12251">Preprint</a> | <a href="https://youtu.be/yyBv3xGClnk">Video</a>)</li>
+<em>“Task-Space Clustering for Mobile Manipulator Task Sequencing,”</em> 
+International Conference on Robotics and Automation (<strong>ICRA 2023</strong>). 
+(<a href="https://doi.org/10.1109/ICRA48891.2023.10161293">PDF</a> | <a href="https://youtu.be/Vopupf81hYo">Video</a>)</li>
 </ul>
 
 
@@ -688,6 +748,21 @@ submitted for ICRA 2024.
 
 
 
+
+  <div id="access-lastmod" class="post">
+    <div class="panel-heading">Recently Updated</div>
+    <ul class="post-content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/welcome/">Welcome!</a>
+        </li>
+      
+    </ul>
+  </div>
+  <!-- #access-lastmod -->
 
 
       <!-- The trending tags list -->
@@ -941,7 +1016,7 @@ submitted for ICRA 2024.
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://github.com/quangnamng">Quang Nam Nguyen</a>.
         
           <span

@@ -4,16 +4,19 @@ icon: fas fa-info-circle
 order: 5
 ---
 
-![img-description](/figs/avatar.jpg){: w="500"}
+![img-description](/figs/avatar.jpg){: w="300"}
 
-My name is **NGUYEN Quang Nam**. I was born and raised in Hanoi, Vietnam.
+My name is **Quang-Nam Nguyen**. I was born and raised in Hanoi, Vietnam.
 
-In 2021, I obtained my **Bachelor of Engineering** at **National University of Singapore (NUS)** 
-with double major in Mechanical Engineering and Physics, and achieved Highest Distinction with Honours.
+I am currently a Mechanical Engineering PhD student at **New York University (NYU)**
+in the [Machines in Motion Laboratory](https://www.machinesinmotion.org/).
 
-Currently, I am a Research Assistant at **Nanyang Technological University (NTU Singapore)** 
-under [Control Robotics Intelligence (CRI) Group](https://personal.ntu.edu.sg/cuong/). 
-My research is in **Robotics**, more specifically Motion Planning and Control. 
-If you have the same interest, please take a look at [Research](https://quangnamng.github.io/research/).
+I obtained my Bachelor of Engineering from **National University of Singapore (NUS)** in 2021 
+with double major in Mechanical Engineering and Physics, and achieved Highest Distinction Honours.
 
-I am always delighted to connect and have a chat via [LinkedIn](https://www.linkedin.com/in/nguyen-quang-nam/).
+From 2021-2024, I was Research Assistant at **Nanyang Technological University (NTU Singapore)** 
+in the [Control Robotics Intelligence (CRI) Group](https://personal.ntu.edu.sg/cuong/). 
+
+My research is in **Robotics**. 
+If you have similar interests, please take a look at 
+[Research](https://quangnamng.github.io/research/).
