@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Quang Nam Nguyen</title>
   <subtitle>A site for my academic and personal notes.</subtitle>
-  <updated>2024-11-28T06:26:48+08:00</updated>
+  <updated>2024-11-28T06:43:14+08:00</updated>
   <author>
     <name>Quang Nam Nguyen</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/welcome/" rel="alternate" type="text/html" title="Welcome!" />
     <published>2023-10-16T18:00:00+08:00</published>
   
-    <updated>2023-10-30T11:28:08+08:00</updated>
+    <updated>2024-11-28T06:30:01+08:00</updated>
   
     <id>http://localhost:4000/posts/welcome/</id>
     <content src="http://localhost:4000/posts/welcome/" />
