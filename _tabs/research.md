@@ -26,11 +26,11 @@ at **Nanyang Technological University (NTU Singapore)** from 2021-2024.
 * Problem: find optimal base trajectory under constraints
 $$
 \begin{aligned}
-&\mathbf{x}^{opt}(s) = \arg\min_{\mathbf{x}(s)} J[\mathbf{x}(s)]\\
-\text{s.t.}\quad
-&\mathbf{x}(s) \in \mathcal{X}_a, \quad 
-\dot{\mathbf{x}}(s) \in \mathcal{V}_a \quad
-\forall s \in [0,1]
+    &\mathbf{x}^{opt}(s) = \arg\min_{\mathbf{x}(s)} J[\mathbf{x}(s)]\\
+    \text{s.t.}\quad
+    &\mathbf{x}(s) \in \mathcal{X}_a, \quad 
+    \dot{\mathbf{x}}(s) \in \mathcal{V}_a \quad
+    \forall s \in [0,1]
 \end{aligned}
 $$
 * Cost: weighted squared velocity (which encouraging stable motion)
