@@ -2,13 +2,15 @@
 # the default layout is 'page'
 icon: fas fa-solid fa-feather
 order: 2
+math: true
 ---
+
+See full list of [Publications](https://quangnamng.github.io/research/#publications) below.
 
 ## Current Research
 I currently research in **Robotics** as a PhD student in the 
 [Machines in Motion Laboratory](https://www.machinesinmotion.org/) 
 at **New York University (NYU)**.
-
 My current interest is optimal control and reinforcement learning 
 for exoskeletons and manipulators. 
 More details will be added in the future.
@@ -25,22 +27,25 @@ at **Nanyang Technological University (NTU Singapore)** from 2021-2024.
 [Singapore Centre for 3D Printing](https://www.ntu.edu.sg/sc3dp))
 * Problem: find optimal base trajectory under constraints
 $$
-\begin{aligned}
+\begin{equation}
+\begin{split}
     &\mathbf{x}^{opt}(s) = \arg\min_{\mathbf{x}(s)} J[\mathbf{x}(s)]\\
     \text{s.t.}\quad
     &\mathbf{x}(s) \in \mathcal{X}_a, \quad 
     \dot{\mathbf{x}}(s) \in \mathcal{V}_a \quad
     \forall s \in [0,1]
-\end{aligned}
+\end{split}
+\end{equation}
 $$
-* Cost: weighted squared velocity (which encouraging stable motion)
-* Constraints: end-effector trajectory continuity constraint, arm's joint limits, 
-base's velocity limits and collision avoidance
-* Solution:
+* Cost $J[\mathbf{x}(s)]$: integral of weighted squared velocity 
+(which encourages steady motion, avoids abrupt changes)
+* Constraints $\mathcal{X}_a, \mathcal{V}_a$: include end-effector trajectory continuity 
+constraint, arm's joint limits, base's velocity limits and collision avoidance
+* Method:
 1. Based on the required end-effector's trajectory and other constraints, 
 find the admissible configuration spacetime for the mobile base.
-2. Dynamic Programming to compute the optimal base trajectory.
-3. Inverse Kinematics to find the joint trajectory of the arm.
+2. Dynamic Programming to find the optimal base trajectory.
+3. Inverse Kinematics to compute the joint trajectory of the arm.
 * Paper: _Planning Optimal Trajectories for Mobile Manipulators under End-effector 
 Trajectory Continuity Constraint_ (ICRA 2024) 
 ([PDF](https://doi.org/10.1109/ICRA57147.2024.10611630) | [Video](https://youtu.be/yyBv3xGClnk))
@@ -51,7 +56,7 @@ Trajectory Continuity Constraint_ (ICRA 2024)
 beyond the reachability of the robotic arm, e.g. drilling in a shopfloor (inspired by 
 [Airbus Shopfloor Challenge](https://robohub.org/tag/airbus-shopfloor-challenge/))
 * Problem: find minimum number of base poses and shortest motion sequence to visit all targets
-* Solution: two-step approach
+* Method:
 1. Task-space clustering: based on kinematic reachability analysis,
 cluster the task space into a minimum set of target clusters such that 
 there exists a reachable base pose for each cluster to reach all inside targets.
