@@ -5,14 +5,12 @@ order: 2
 math: true
 ---
 
-See full list of [Publications](https://quangnamng.github.io/research/#publications) below.
+See full list of [Publications](https://quangnamng.github.io/research/#selected-publications) below.
 
 ## Current Research
-I currently research in **Robotics** as a PhD student in the 
-[Machines in Motion Laboratory](https://www.machinesinmotion.org/) 
-at **New York University (NYU)**.
-My current interest is optimal control and reinforcement learning 
-for exoskeletons and manipulators. 
+I am doing **Robotics** research as a PhD student in the 
+[Machines in Motion Laboratory](https://www.machinesinmotion.org/) at **New York University (NYU)**. 
+My current interest is optimal control and reinforcement learning for exoskeletons and manipulators. 
 More details will be added in the future.
 
 ## Past Research
@@ -66,17 +64,17 @@ then shortest manipulator joint trajectory to visit all targets.
 ([PDF](https://doi.org/10.1109/ICRA48891.2023.10161293) | [Video](https://youtu.be/Vopupf81hYo))
 
 
-## Publications
+## Selected Publications
 Full list: [Google Scholar](https://scholar.google.com/citations?user=6V-YHEkAAAAJ&hl=en)
 
 2024:
-* **Q.-N. Nguyen** and Q.-C. Pham, 
+* **Q.-N. Nguyen**, Q.-C. Pham, 
 _"Planning Optimal Trajectories for Mobile Manipulators under End-effector Trajectory 
-Continuity Constraint,"_ International Conference on Robotics and Automation (**ICRA 2024**). 
+Continuity Constraint,"_ International Conference on Robotics and Automation (**ICRA 2024**) 
 ([PDF](https://doi.org/10.1109/ICRA57147.2024.10611630) | [Video](https://youtu.be/yyBv3xGClnk))
 
 2023:
-* **Q.-N. Nguyen**, N. Adrian, and Q.-C. Pham, 
+* **Q.-N. Nguyen**, N. Adrian, Q.-C. Pham, 
 _"Task-Space Clustering for Mobile Manipulator Task Sequencing,"_ 
-International Conference on Robotics and Automation (**ICRA 2023**). 
+International Conference on Robotics and Automation (**ICRA 2023**) 
 ([PDF](https://doi.org/10.1109/ICRA48891.2023.10161293) | [Video](https://youtu.be/Vopupf81hYo))

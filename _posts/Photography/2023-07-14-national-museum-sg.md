@@ -34,7 +34,7 @@ of pedal trishaws in the 1930s.
 ![img-description](/figs/2023-07-14-national-museum-sg/syonan-to.jpg){: w="700"}
 _Syonan-To (1942 - 1945)_
 
-*Syonan-To* means *"Light of the South"*. This feels personal.
+*Syonan-To* means *"Light of the South."*
 
 ![img-description](/figs/2023-07-14-national-museum-sg/british_return.JPG){: w="700"}
 _British return (1945 - 1959)_

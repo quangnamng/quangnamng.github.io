@@ -14,7 +14,7 @@
 
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
-<html lang="en" >
+<html lang="en" data-mode="light">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
@@ -36,18 +36,18 @@
 <meta property="og:description" content="See full list of Publications below." />
 <link rel="canonical" href="http://localhost:4000/research/" />
 <meta property="og:url" content="http://localhost:4000/research/" />
-<meta property="og:site_name" content="Quang Nam Nguyen" />
+<meta property="og:site_name" content="Quang-Nam Nguyen" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-11-28T11:59:53+08:00" />
+<meta property="article:published_time" content="2024-12-01T20:48:02-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Research" />
 <meta name="google-site-verification" content="googlea57af1b150f7f6a1.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-28T11:59:53+08:00","datePublished":"2024-11-28T11:59:53+08:00","description":"See full list of Publications below.","headline":"Research","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/"},"url":"http://localhost:4000/research/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-01T20:48:02-05:00","datePublished":"2024-12-01T20:48:02-05:00","description":"See full list of Publications below.","headline":"Research","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/"},"url":"http://localhost:4000/research/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Research | Quang Nam Nguyen
+  <title>Research | Quang-Nam Nguyen
   </title>
 
   <!--
@@ -64,8 +64,8 @@
   <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Quang Nam Nguyen">
-<meta name="application-name" content="Quang Nam Nguyen">
+<meta name="apple-mobile-web-app-title" content="Quang-Nam Nguyen">
+<meta name="application-name" content="Quang-Nam Nguyen">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -117,151 +117,6 @@
   <!-- JavaScript -->
 
   
-    <!-- Switch the mode between dark and light. -->
-
-<script type="text/javascript">
-  class ModeToggle {
-    static get MODE_KEY() {
-      return 'mode';
-    }
-    static get MODE_ATTR() {
-      return 'data-mode';
-    }
-    static get DARK_MODE() {
-      return 'dark';
-    }
-    static get LIGHT_MODE() {
-      return 'light';
-    }
-    static get ID() {
-      return 'mode-toggle';
-    }
-
-    constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      }
-
-      let self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addEventListener('change', () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
-        }
-
-        self.notify();
-      });
-    } /* constructor() */
-
-    get sysDarkPrefers() {
-      return window.matchMedia('(prefers-color-scheme: dark)');
-    }
-
-    get isSysDarkPrefer() {
-      return this.sysDarkPrefers.matches;
-    }
-
-    get isDarkMode() {
-      return this.mode === ModeToggle.DARK_MODE;
-    }
-
-    get isLightMode() {
-      return this.mode === ModeToggle.LIGHT_MODE;
-    }
-
-    get hasMode() {
-      return this.mode != null;
-    }
-
-    get mode() {
-      return sessionStorage.getItem(ModeToggle.MODE_KEY);
-    }
-
-    /* get the current mode on screen */
-    get modeStatus() {
-      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.LIGHT_MODE;
-      }
-    }
-
-    setDark() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-    }
-
-    setLight() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-    }
-
-    clearMode() {
-      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
-    }
-
-    /* Notify another plugins that the theme mode has changed */
-    notify() {
-      window.postMessage(
-        {
-          direction: ModeToggle.ID,
-          message: this.modeStatus
-        },
-        '*'
-      );
-    }
-
-    flipMode() {
-      if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
-            this.clearMode();
-          } else {
-            this.setLight();
-          }
-        } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
-        }
-      } else {
-        if (this.isSysDarkPrefer) {
-          this.setLight();
-        } else {
-          this.setDark();
-        }
-      }
-
-      this.notify();
-    } /* flipMode() */
-  } /* ModeToggle */
-
-  const modeToggle = new ModeToggle();
-</script>
-
-  
 
   <!-- A placeholder to allow defining custom metadata -->
 
@@ -276,7 +131,7 @@
     <a href="/" id="avatar" class="rounded-circle"><img src="/figs/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <h1 class="site-title">
-      <a href="/">Quang Nam Nguyen</a>
+      <a href="/">Quang-Nam Nguyen</a>
     </h1>
     <p class="site-subtitle fst-italic mb-0">My academic & personal notes</p>
   </header>
@@ -347,14 +202,6 @@
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
-    
-      <button type="button" class="mode-toggle btn" aria-label="Switch Mode">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      
-        <span class="icon-border"></span>
-      
     
 
     
@@ -623,14 +470,12 @@
       Research
     </h1>
     <div class="content">
-      <p>See full list of <a href="https://quangnamng.github.io/research/#publications">Publications</a> below.</p>
+      <p>See full list of <a href="https://quangnamng.github.io/research/#selected-publications">Publications</a> below.</p>
 
 <h2 id="current-research"><span class="me-2">Current Research</span><a href="#current-research" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>I currently research in <strong>Robotics</strong> as a PhD student in the 
-<a href="https://www.machinesinmotion.org/">Machines in Motion Laboratory</a> 
-at <strong>New York University (NYU)</strong>.
-My current interest is optimal control and reinforcement learning 
-for exoskeletons and manipulators. 
+<p>I am doing <strong>Robotics</strong> research as a PhD student in the 
+<a href="https://www.machinesinmotion.org/">Machines in Motion Laboratory</a> at <strong>New York University (NYU)</strong>. 
+My current interest is optimal control and reinforcement learning for exoskeletons and manipulators. 
 More details will be added in the future.</p>
 
 <h2 id="past-research"><span class="me-2">Past Research</span><a href="#past-research" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -689,22 +534,22 @@ then shortest manipulator joint trajectory to visit all targets.</li>
 (<a href="https://doi.org/10.1109/ICRA48891.2023.10161293">PDF</a> | <a href="https://youtu.be/Vopupf81hYo">Video</a>)</li>
 </ul>
 
-<h2 id="publications"><span class="me-2">Publications</span><a href="#publications" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="selected-publications"><span class="me-2">Selected Publications</span><a href="#selected-publications" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p>Full list: <a href="https://scholar.google.com/citations?user=6V-YHEkAAAAJ&amp;hl=en">Google Scholar</a></p>
 
 <p>2024:</p>
 <ul>
-  <li><strong>Q.-N. Nguyen</strong> and Q.-C. Pham, 
+  <li><strong>Q.-N. Nguyen</strong>, Q.-C. Pham, 
 <em>“Planning Optimal Trajectories for Mobile Manipulators under End-effector Trajectory 
-Continuity Constraint,”</em> International Conference on Robotics and Automation (<strong>ICRA 2024</strong>). 
+Continuity Constraint,”</em> International Conference on Robotics and Automation (<strong>ICRA 2024</strong>) 
 (<a href="https://doi.org/10.1109/ICRA57147.2024.10611630">PDF</a> | <a href="https://youtu.be/yyBv3xGClnk">Video</a>)</li>
 </ul>
 
 <p>2023:</p>
 <ul>
-  <li><strong>Q.-N. Nguyen</strong>, N. Adrian, and Q.-C. Pham, 
+  <li><strong>Q.-N. Nguyen</strong>, N. Adrian, Q.-C. Pham, 
 <em>“Task-Space Clustering for Mobile Manipulator Task Sequencing,”</em> 
-International Conference on Robotics and Automation (<strong>ICRA 2023</strong>). 
+International Conference on Robotics and Automation (<strong>ICRA 2023</strong>) 
 (<a href="https://doi.org/10.1109/ICRA48891.2023.10161293">PDF</a> | <a href="https://youtu.be/Vopupf81hYo">Video</a>)</li>
 </ul>
 
@@ -898,7 +743,7 @@ International Conference on Robotics and Automation (<strong>ICRA 2023</strong>)
     <time>2024</time>
 
     
-      <a href="https://github.com/quangnamng">Quang Nam Nguyen</a>.
+      <a href="https://github.com/quangnamng">Quang-Nam Nguyen</a>.
     
 
     

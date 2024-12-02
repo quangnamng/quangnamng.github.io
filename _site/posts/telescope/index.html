@@ -14,7 +14,7 @@
 
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
-<html lang="en" >
+<html lang="en" data-mode="light">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
@@ -36,22 +36,22 @@
 <meta property="og:description" content="Some photos taken using telescopes during my high school years at High School for Gifted Students, Hanoi National University of Education (HNUE)." />
 <link rel="canonical" href="http://localhost:4000/posts/telescope/" />
 <meta property="og:url" content="http://localhost:4000/posts/telescope/" />
-<meta property="og:site_name" content="Quang Nam Nguyen" />
+<meta property="og:site_name" content="Quang-Nam Nguyen" />
 <meta property="og:image" content="http://localhost:4000/figs/2023-07-06-telescope/telescope_1.jpg" />
 <meta property="og:image:alt" content="Telescope Takahashi EM-500 at Department of Physics, Hanoi National University of Education" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-07-06T10:30:00+08:00" />
+<meta property="article:published_time" content="2023-07-05T22:30:00-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/figs/2023-07-06-telescope/telescope_1.jpg" />
 <meta name="twitter:image:alt" content="Telescope Takahashi EM-500 at Department of Physics, Hanoi National University of Education" />
 <meta property="twitter:title" content="Telescope photos" />
 <meta name="google-site-verification" content="googlea57af1b150f7f6a1.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-07-06T10:30:00+08:00","datePublished":"2023-07-06T10:30:00+08:00","description":"Some photos taken using telescopes during my high school years at High School for Gifted Students, Hanoi National University of Education (HNUE).","headline":"Telescope photos","image":{"alt":"Telescope Takahashi EM-500 at Department of Physics, Hanoi National University of Education","url":"http://localhost:4000/figs/2023-07-06-telescope/telescope_1.jpg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/telescope/"},"url":"http://localhost:4000/posts/telescope/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-07-05T22:30:00-04:00","datePublished":"2023-07-05T22:30:00-04:00","description":"Some photos taken using telescopes during my high school years at High School for Gifted Students, Hanoi National University of Education (HNUE).","headline":"Telescope photos","image":{"alt":"Telescope Takahashi EM-500 at Department of Physics, Hanoi National University of Education","url":"http://localhost:4000/figs/2023-07-06-telescope/telescope_1.jpg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/telescope/"},"url":"http://localhost:4000/posts/telescope/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Telescope photos | Quang Nam Nguyen
+  <title>Telescope photos | Quang-Nam Nguyen
   </title>
 
   <!--
@@ -68,8 +68,8 @@
   <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Quang Nam Nguyen">
-<meta name="application-name" content="Quang Nam Nguyen">
+<meta name="apple-mobile-web-app-title" content="Quang-Nam Nguyen">
+<meta name="application-name" content="Quang-Nam Nguyen">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -123,151 +123,6 @@
   <!-- JavaScript -->
 
   
-    <!-- Switch the mode between dark and light. -->
-
-<script type="text/javascript">
-  class ModeToggle {
-    static get MODE_KEY() {
-      return 'mode';
-    }
-    static get MODE_ATTR() {
-      return 'data-mode';
-    }
-    static get DARK_MODE() {
-      return 'dark';
-    }
-    static get LIGHT_MODE() {
-      return 'light';
-    }
-    static get ID() {
-      return 'mode-toggle';
-    }
-
-    constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      }
-
-      let self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addEventListener('change', () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
-        }
-
-        self.notify();
-      });
-    } /* constructor() */
-
-    get sysDarkPrefers() {
-      return window.matchMedia('(prefers-color-scheme: dark)');
-    }
-
-    get isSysDarkPrefer() {
-      return this.sysDarkPrefers.matches;
-    }
-
-    get isDarkMode() {
-      return this.mode === ModeToggle.DARK_MODE;
-    }
-
-    get isLightMode() {
-      return this.mode === ModeToggle.LIGHT_MODE;
-    }
-
-    get hasMode() {
-      return this.mode != null;
-    }
-
-    get mode() {
-      return sessionStorage.getItem(ModeToggle.MODE_KEY);
-    }
-
-    /* get the current mode on screen */
-    get modeStatus() {
-      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.LIGHT_MODE;
-      }
-    }
-
-    setDark() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-    }
-
-    setLight() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-    }
-
-    clearMode() {
-      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
-    }
-
-    /* Notify another plugins that the theme mode has changed */
-    notify() {
-      window.postMessage(
-        {
-          direction: ModeToggle.ID,
-          message: this.modeStatus
-        },
-        '*'
-      );
-    }
-
-    flipMode() {
-      if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
-            this.clearMode();
-          } else {
-            this.setLight();
-          }
-        } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
-        }
-      } else {
-        if (this.isSysDarkPrefer) {
-          this.setLight();
-        } else {
-          this.setDark();
-        }
-      }
-
-      this.notify();
-    } /* flipMode() */
-  } /* ModeToggle */
-
-  const modeToggle = new ModeToggle();
-</script>
-
-  
 
   <!-- A placeholder to allow defining custom metadata -->
 
@@ -282,7 +137,7 @@
     <a href="/" id="avatar" class="rounded-circle"><img src="/figs/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <h1 class="site-title">
-      <a href="/">Quang Nam Nguyen</a>
+      <a href="/">Quang-Nam Nguyen</a>
     </h1>
     <p class="site-subtitle fst-italic mb-0">My academic & personal notes</p>
   </header>
@@ -353,14 +208,6 @@
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
-    
-      <button type="button" class="mode-toggle btn" aria-label="Switch Mode">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      
-        <span class="icon-border"></span>
-      
     
 
     
@@ -1024,7 +871,7 @@
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul  6, 2023
+  Jul  5, 2023
 </time>
 
       </span>
@@ -1052,7 +899,7 @@
 
           <em>
             
-              <a href="https://github.com/quangnamng">Quang Nam Nguyen</a>
+              <a href="https://github.com/quangnamng">Quang-Nam Nguyen</a>
             
           </em>
         </span>
@@ -1168,7 +1015,7 @@ Hanoi National University of Education (HNUE).</p>
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Telescope%20photos%20-%20Quang%20Nam%20Nguyen&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftelescope%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Telescope%20photos%20-%20Quang-Nam%20Nguyen&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftelescope%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fab fa-twitter"></i>
       </a>
     
@@ -1182,14 +1029,14 @@ Hanoi National University of Education (HNUE).</p>
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Telescope%20photos%20-%20Quang%20Nam%20Nguyen&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftelescope%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Telescope%20photos%20-%20Quang-Nam%20Nguyen&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftelescope%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftelescope%2F&text=Telescope%20photos%20-%20Quang%20Nam%20Nguyen" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftelescope%2F&text=Telescope%20photos%20-%20Quang-Nam%20Nguyen" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1464,7 +1311,7 @@ Hanoi National University of Education (HNUE).</p>
   data-df="ll"
   
 >
-  Jul 14, 2023
+  Jul 13, 2023
 </time>
 
               <h4 class="pt-0 my-2">National Museum of Singapore</h4>
@@ -1545,7 +1392,7 @@ Ricksha...
     <time>2024</time>
 
     
-      <a href="https://github.com/quangnamng">Quang Nam Nguyen</a>.
+      <a href="https://github.com/quangnamng">Quang-Nam Nguyen</a>.
     
 
     
